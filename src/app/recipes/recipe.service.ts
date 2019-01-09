@@ -25,8 +25,6 @@ export class RecipeService {
   constructor(private shoppingListService: ShoppingListService) {
   }
 
-  selectedRecipe = new EventEmitter<Recipe>();
-
   getRecipes() {
     return this.recipes.slice();
   }
