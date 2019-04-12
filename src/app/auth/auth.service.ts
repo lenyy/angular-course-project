@@ -16,7 +16,7 @@ export class AuthService {
     }
 
     signInUser(email: string, password: string) {
-        firebase.auth().signInWithEmailAndPassword(email,password)
+        firebase.auth().signInWithEmailAndPassword(email, password)
             .then(
                 response => {
                     this.router.navigate(['/']);
@@ -26,12 +26,12 @@ export class AuthService {
                                 this.token = token;
                             }
                         );
-                    console.log(response)
+                    console.log(response);
                 }
             )
             .catch(
                 error => console.log(error)
-            )
+            );
     }
 
     getToken() {
