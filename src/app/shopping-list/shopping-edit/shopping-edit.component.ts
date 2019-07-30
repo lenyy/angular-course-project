@@ -4,7 +4,7 @@ import {NgForm} from '@angular/forms';
 import {Subscription} from 'rxjs';
 import {Store} from '@ngrx/store';
 import * as ShoppingListActions from '../store/shopping-list.actions';
-import {RemoveIngredient, StopEdit, UpdateIngredient} from '../store/shopping-list.actions';
+import {DeleteIngredient, StopEdit, UpdateIngredient} from '../store/shopping-list.actions';
 import * as fromApp from '../../store/app.reducer';
 
 @Component({
@@ -61,7 +61,7 @@ export class ShoppingEditComponent implements OnInit, OnDestroy {
     }
 
     onDelete() {
-        this.store.dispatch(new RemoveIngredient());
+        this.store.dispatch(new DeleteIngredient());
         this.onReset();
     }
 

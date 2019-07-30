@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {Ingredient} from '../shared/ingredient.model';
 import {Store} from '@ngrx/store';
-import {Observable} from 'rxjs/Observable';
+import {Observable} from 'rxjs';
 import {StartEdit} from './store/shopping-list.actions';
 import * as fromApp from '../store/app.reducer';
 

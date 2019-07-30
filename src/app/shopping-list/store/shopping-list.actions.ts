@@ -5,7 +5,7 @@ import {Ingredient} from '../../shared/ingredient.model';
 export const ADD_INGREDIENT = 'ADD_INGREDIENT';
 export const ADD_INGREDIENTS = 'ADD_INGREDIENTS';
 export const UPDATE_INGREDIENT = 'UPDATE_INGREDIENT';
-export const REMOVE_INGREDIENT = 'REMOVE_INGREDIENT';
+export const DELETE_INGREDIENT = 'DELETE_INGREDIENT';
 export const START_EDIT = 'START_EDIT';
 export const STOP_EDIT = 'STOP_EDIT';
 
@@ -29,8 +29,8 @@ export class UpdateIngredient implements Action {
     }) {}
 }
 
-export class RemoveIngredient implements Action {
-    readonly type = REMOVE_INGREDIENT;
+export class DeleteIngredient implements Action {
+    readonly type = DELETE_INGREDIENT;
 }
 
 export class StartEdit implements Action {
@@ -43,9 +43,10 @@ export class StopEdit implements Action {
     readonly type = STOP_EDIT;
 }
 
-export type ShoppingListActions = AddIngredient |
+export type ShoppingListActions =
+    AddIngredient |
     AddIngredients |
     UpdateIngredient |
-    RemoveIngredient |
+    DeleteIngredient |
     StartEdit |
     StopEdit;
